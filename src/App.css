@@ -1,0 +1,106 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+  background-image: url(../public/fractal-1800241.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.containerInput {
+  background-color: #313131;
+  position: relative;
+  overflow: hidden;
+ 
+  margin-top: 50px;
+  padding: 0 0 4px 0;
+  z-index: 1;
+  font-size: 15px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.containerInput::before {
+  content: "";
+  width: 110%;
+  aspect-ratio: 1;
+  position: absolute;
+  inset: 0 0 0 0;
+  margin: auto;
+  animation: rotate6234 2.5s ease-in-out infinite;
+  z-index: -1;
+  background-image: conic-gradient(
+    from 0deg at 50% 50%,
+    #073aff00 0%,
+    #ff0000ff 25%,
+    #073aff00 25%
+  );
+}
+
+.containerInput > input {
+  width: 700px;
+  font-size: inherit;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  background-color: #313131;
+  outline: 5px solid #313131;
+}
+
+.containerInput > input:focus {
+  outline: none;
+}
+
+.containerInput > input:not(:placeholder-shown) {
+  outline: none;
+}
+
+.containerInput > input:not(:placeholder-shown):valid {
+  outline: 4px solid rgb(0, 255, 183);
+  border-radius: 0;
+}
+
+@keyframes rotate6234 {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+  overflow-y: scroll;
+  width: 80%;
+  height: 80vh;
+  
+  width: 80%;
+  border-radius: 50px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.list {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.data{
+  
+}
